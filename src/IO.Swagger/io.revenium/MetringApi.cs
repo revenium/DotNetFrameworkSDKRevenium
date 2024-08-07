@@ -388,10 +388,10 @@ namespace IO.Swagger.io.revenium
         /// Determine if a ProductKey is valid or not Determine if a ProductKey is valid or not
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productKey">The product key (optional)</param>
-        /// <param name="application">The application ID (optional)</param>
+        /// <param name="subscription">The subscription (optional)</param>
+        /// <param name="subscriberCredential">The subscriber credential ID (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ValidWithHttpInfo (string productKey = null, string application = null)
+        public ApiResponse< Object > ValidWithHttpInfo (string subscription = null, string subscriberCredential = null)
         {
 
             var localVarPath = "/meter/product-key";
@@ -415,8 +415,8 @@ namespace IO.Swagger.io.revenium
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (productKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "productKey", productKey)); // query parameter
-            if (application != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "application", application)); // query parameter
+            if (subscription != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "productKey", subscription)); // query parameter
+            if (subscriberCredential != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "application", subscriberCredential)); // query parameter
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,

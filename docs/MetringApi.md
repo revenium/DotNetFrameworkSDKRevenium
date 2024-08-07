@@ -90,13 +90,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new MetringApi();
-            var productKey = productKey_example;  // string | The product key (optional) 
-            var application = application_example;  // string | The application ID (optional) 
+            var subscription = subscription_example;  // string | The subscription (optional) 
+            var subscriberCredential = subscriberCredential_example;  // string | The subscriberCredential ID (optional) 
 
             try
             {
                 // Determine if a ProductKey is valid or not
-                Object result = apiInstance.Valid(productKey, application);
+                Object result = apiInstance.Valid(subscription, subscriberCredential);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,8 +112,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productKey** | **string**| The product key | [optional] 
- **application** | **string**| The application ID | [optional] 
+ **subscription** | **string**| The subscription | [optional] 
+ **subscriberCredential** | **string**| The subscriberCredential ID | [optional] 
 
 ### Return type
 

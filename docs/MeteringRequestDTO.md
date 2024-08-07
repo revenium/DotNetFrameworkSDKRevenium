@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Api** | **string** |  | [optional] 
-**ProductKey** | **string** | The Product Key ID | [optional] 
-**Application** | **string** | The Application ID | [optional] 
+**Subscription** | **string** | The Subscription ID | [optional] 
+**Subscriber Credential** | **string** | The Subscriber Credential ID | [optional] 
 **Method** | **string** | The HTTP method being invoked | 
 **Url** | **string** | The HTTP URL being invoked | [optional] 
 **Metadata** | **string** | Additional billing metadata (supports numeric values and comma-seperated key-value pairs) | [optional] 

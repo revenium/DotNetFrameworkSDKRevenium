@@ -32,8 +32,8 @@ namespace IO.Swagger.io.revenium
         /// Initializes a new instance of the <see cref="MeteringRequestDTO" /> class.
         /// </summary>
         /// <param name="api">api.</param>
-        /// <param name="productKey">The Product Key ID.</param>
-        /// <param name="application">The Application ID.</param>
+        /// <param name="subscription">The Product Key ID.</param>
+        /// <param name="subscriberCredential">The Application ID.</param>
         /// <param name="method">The HTTP method being invoked (required).</param>
         /// <param name="url">The HTTP URL being invoked.</param>
         /// <param name="metadata">Additional billing metadata (supports numeric values and comma-seperated key-value pairs).</param>
@@ -54,7 +54,7 @@ namespace IO.Swagger.io.revenium
         /// <param name="platformAPIKey">platformAPIKey (required).</param>
         /// <param name="elements">Dynamic metering elements (required).</param>
         /// <param name="source">the source of the event.</param>
-        public MeteringRequestDTO(string api = default(string), string productKey = default(string), string application = default(string), string method = default(string), string url = default(string), string metadata = default(string), double? backendLatency = default(double?), double? gatewayLatency = default(double?), int? responseCode = default(int?), bool? timedOut = default(bool?), long? requestMessageSize = default(long?), long? responseMessageSize = default(long?), List<string> requestHeaders = default(List<string>), List<string> responseHeaders = default(List<string>), string userAgent = default(string), string remoteUser = default(string), string remoteHost = default(string), string httpProtocol = default(string), string contentType = default(string), string correlationId = default(string), string platformAPIKey = default(string), List<ElementDTO> elements = default(List<ElementDTO>), string source = default(string))
+        public MeteringRequestDTO(string api = default(string), string subscription = default(string), string subscriberCredential = default(string), string method = default(string), string url = default(string), string metadata = default(string), double? backendLatency = default(double?), double? gatewayLatency = default(double?), int? responseCode = default(int?), bool? timedOut = default(bool?), long? requestMessageSize = default(long?), long? responseMessageSize = default(long?), List<string> requestHeaders = default(List<string>), List<string> responseHeaders = default(List<string>), string userAgent = default(string), string remoteUser = default(string), string remoteHost = default(string), string httpProtocol = default(string), string contentType = default(string), string correlationId = default(string), string platformAPIKey = default(string), List<ElementDTO> elements = default(List<ElementDTO>), string source = default(string))
         {
             // to ensure "method" is required (not null)
             if (method == null)
@@ -140,14 +140,14 @@ namespace IO.Swagger.io.revenium
         /// </summary>
         /// <value>The Product Key ID</value>
         [DataMember(Name="productKey", EmitDefaultValue=false)]
-        public string ProductKey { get; set; }
+        public string Subscription { get; set; }
 
         /// <summary>
         /// The Application ID
         /// </summary>
         /// <value>The Application ID</value>
-        [DataMember(Name="application", EmitDefaultValue=false)]
-        public string Application { get; set; }
+        [DataMember(Name = "application", EmitDefaultValue = false)]
+        public string SubscriberCredential { get; set; }
 
         /// <summary>
         /// The HTTP method being invoked
@@ -298,8 +298,8 @@ namespace IO.Swagger.io.revenium
             var sb = new StringBuilder();
             sb.Append("class MeteringRequestDTO {\n");
             sb.Append("  Api: ").Append(Api).Append("\n");
-            sb.Append("  ProductKey: ").Append(ProductKey).Append("\n");
-            sb.Append("  Application: ").Append(Application).Append("\n");
+            sb.Append("  Subscription: ").Append(Subscription).Append("\n");
+            sb.Append("  SubscriberCredential: ").Append(SubscriberCredential).Append("\n");
             sb.Append("  Method: ").Append(Method).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
@@ -360,14 +360,14 @@ namespace IO.Swagger.io.revenium
                     this.Api.Equals(input.Api))
                 ) && 
                 (
-                    this.ProductKey == input.ProductKey ||
-                    (this.ProductKey != null &&
-                    this.ProductKey.Equals(input.ProductKey))
+                    this.Subscription== input.Subscription ||
+                    (this.Subscription != null &&
+                    this.Subscription.Equals(input.Subscription))
                 ) && 
                 (
-                    this.Application == input.Application ||
-                    (this.Application != null &&
-                    this.Application.Equals(input.Application))
+                    this.SubscriberCredential == input.SubscriberCredential ||
+                    (this.SubscriberCredential != null &&
+                    this.SubscriberCredential.Equals(input.SubscriberCredential))
                 ) && 
                 (
                     this.Method == input.Method ||
@@ -485,10 +485,10 @@ namespace IO.Swagger.io.revenium
                 int hashCode = 41;
                 if (this.Api != null)
                     hashCode = hashCode * 59 + this.Api.GetHashCode();
-                if (this.ProductKey != null)
-                    hashCode = hashCode * 59 + this.ProductKey.GetHashCode();
-                if (this.Application != null)
-                    hashCode = hashCode * 59 + this.Application.GetHashCode();
+                if (this.Subscription != null)
+                    hashCode = hashCode * 59 + this.Subscription.GetHashCode();
+                if (this.SubscriberCredential != null)
+                    hashCode = hashCode * 59 + this.SubscriberCredential.GetHashCode();
                 if (this.Method != null)
                     hashCode = hashCode * 59 + this.Method.GetHashCode();
                 if (this.Url != null)
