@@ -4,8 +4,8 @@ All URIs are relative to *https://api.revenium.io/meter/v1/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Meter**](MetringApi.md#meter) | **POST** /meter | Insert API metering data
-[**Valid**](MetringApi.md#valid) | **GET** /meter/product-key | Determine if a ProductKey is valid or not
+[**Meter**](MeteringApi.md#meter) | **POST** /meter | Insert API metering data
+[**Valid**](MeteringApi.md#valid) | **GET** /meter/product-key | Determine if a ProductKey is valid or not
 
 <a name="meter"></a>
 # **Meter**
@@ -29,7 +29,7 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new MetringApi();
+            var apiInstance = new MeteringApi();
             var body = new MeteringRequestDTO(); // MeteringRequestDTO | 
 
             try
@@ -40,7 +40,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MetringApi.Meter: " + e.Message );
+                Debug.Print("Exception when calling MeteringApi.Meter: " + e.Message );
             }
         }
     }

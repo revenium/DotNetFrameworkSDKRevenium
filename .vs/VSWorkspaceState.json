@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\docs",
+    "\\src",
+    "\\src\\IO.Swagger",
+    "\\src\\IO.Swagger\\Client",
+    "\\src\\IO.Swagger\\io.revenium"
   ],
-  "SelectedNode": "\\IO.Swagger.sln",
+  "SelectedNode": "\\docs\\MetringApi.md",
   "PreviewInSolutionExplorer": false
 }

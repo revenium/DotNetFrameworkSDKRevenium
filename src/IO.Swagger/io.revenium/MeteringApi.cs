@@ -20,7 +20,7 @@ namespace IO.Swagger.io.revenium
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public interface IMetringApi : IApiAccessor
+        public interface IMeteringApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -119,15 +119,15 @@ namespace IO.Swagger.io.revenium
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public partial class MetringApi : IMetringApi
+        public partial class MeteringApi : IMeteringApi
     {
         private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MetringApi"/> class.
+        /// Initializes a new instance of the <see cref="MeteringApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public MetringApi(String basePath)
+        public MeteringApi(String basePath)
         {
             this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
@@ -138,7 +138,7 @@ namespace IO.Swagger.io.revenium
         /// Initializes a new instance of the <see cref="MetringApi"/> class
         /// </summary>
         /// <returns></returns>
-        public MetringApi()
+        public MeteringApi()
         {
             this.Configuration = IO.Swagger.Client.Configuration.Default;
 
@@ -151,7 +151,7 @@ namespace IO.Swagger.io.revenium
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public MetringApi(IO.Swagger.Client.Configuration configuration = null)
+        public MeteringApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = IO.Swagger.Client.Configuration.Default;
