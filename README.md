@@ -95,8 +95,8 @@ All URIs are relative to *https://api.revenium.io/meter/v1/api*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EventsApi* | [**SaveEvent**](docs/EventsApi.md#saveevent) | **POST** /event | Save can API event
-*MetringApi* | [**Meter**](docs/MetringApi.md#meter) | **POST** /meter | Insert API metering data
-*MetringApi* | [**Valid**](docs/MetringApi.md#valid) | **GET** /meter/product-key | Determine if a ProductKey is valid or not
+*MeteringApi* | [**Meter**](docs/MeteringApi.md#meter) | **POST** /meter | Insert API metering data
+*MeteringApi* | [**Valid**](docs/MeteringApi.md#valid) | **GET** /meter/product-key | Determine if a ProductKey is valid or not
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
