@@ -111,8 +111,8 @@ namespace IO.Swagger.io.revenium
                 this.Elements = elements;
             }
             this.Api = api;
-            this.ProductKey = productKey;
-            this.Application = application;
+            this.Subscription = subscription;
+            this.SubscriberCredential = subscriberCredential;
             this.Url = url;
             this.Metadata = metadata;
             this.BackendLatency = backendLatency;
@@ -126,7 +126,7 @@ namespace IO.Swagger.io.revenium
             this.HttpProtocol = httpProtocol;
             this.ContentType = contentType;
             this.CorrelationId = correlationId;
-            this.Source = source;
+            this.Source = "SDK_DOTNET";
         }
         
         /// <summary>
@@ -286,8 +286,8 @@ namespace IO.Swagger.io.revenium
         /// the source of the event
         /// </summary>
         /// <value>the source of the event</value>
-        [DataMember(Name="source", EmitDefaultValue=false)]
-        public string Source { get; set; }
+        [DataMember(Name = "source", EmitDefaultValue = false)]
+        public string Source { get; set; } = "SDK_DOTNET";
 
         /// <summary>
         /// Returns the string presentation of the object
